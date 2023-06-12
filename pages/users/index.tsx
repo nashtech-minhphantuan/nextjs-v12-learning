@@ -16,7 +16,7 @@ export default function User({ users }: any) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:4000/users");
+  const res = await fetch("https://jsonplaceholder.typicode.com/users");
   const users = await res.json();
 
   console.log('revalidate')
